@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  </head>
+  <body>
+    <center>
+
+     <section class="main">
+        <div class="slider aa" >
+            <div class="slides active">
+              <img src="zx.png" style="width: 300px;object-fit: contain;
+              " class="animate__animated animate__bounceInLeft animate__slower	1s"> 
+
+              
+
+              <div class="text-container">
+                <h1 class="animate__animated animate__backInDown animate__slower	1s">Freedom for your creative ideas<span style="color: #e76e0b;">.</span>
+                </h1>
+                <p class="animate__animated animate__fadeInRightBig animate__slower	1s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime inventore quas sequi nihil perferendis, dicta odit, porro error </p>
+          
+              
+                <button class="btn" type="button">
+                    <strong>CREATE</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+                  
+                
+                <ul>
+                  <li class="animate__animated animate__zoomInUp animate__slower 10s ">
+                   <img src="x.png" style="width: 30px;">
+                    Lorem ipsum </li>
+                  <li  class="animate__animated animate__zoomInUp animate__slower 10s animate__delay-1s" >
+                    <img src="h.png" style="width: 30px;">
+                    Lorem ipsum </li>
+                  <li  class="animate__animated animate__zoomInUp animate__slower 10s animate__delay-2s">
+                    <img src="p.png" style="width: 30px;">
+                    Lorem ipsum </li>
+                </ul>
+               </div> 
+
+
+            </div>
+    
+            <div class="slides bb">
+               
+
+                <img style="width: 280px;object-fit: contain;" src="m.png" class="animate__animated animate__bounce animate__slower	1s animate__infinite infinite"/> 
+  
+                <div class="text-container container2" style="margin-top: 16px;">
+                    <div class="line">
+                        <img src="ball.png" style="width: 70px; margin-left: -33px;margin-top: 10px;">
+                        <img src="ball.png" style="width: 70px; margin-left: -33px;margin-top: 30px;">
+                        <img src="ball.png" style="width: 70px; margin-left: -33px;margin-top: 50px;">
+                        <img src="ball.png" style="width: 70px; margin-left: -33px;margin-top: 40px;">
+                      </div>
+                    
+                      <div class="p72">
+                        <h3 style="margin-top: -2px;"> <span style="color: #FFC727;"> 1999. </span>Our Start</h3>
+                        <p class="animate__animated animate__fadeInDown animate__slower	1s animate__delay-5s	5s">Pellentesque placerat eros ac finibus congue. Integer consectetur, lorem nec accumsan commodo, sem </p>
+                         <br><hr>
+                        <h3> <span style="color: #FFC727;"> 2005. </span>Opening New Offices</h3>
+                        <p class="animate__animated animate__fadeInDown animate__slower	1s animate__delay-5s	5s">Albus, emeritis hibridas hic dignus de fortis, altus orexis. Regius axonas ducunt ad historia.</p>
+                        <br><hr>
+                        <h3> <span style="color: #FFC727;"> 2010. </span> Marketing Experts</h3>
+                        <p class="animate__animated animate__fadeInDown animate__slower	1s animate__delay-5s	5s">Sunt nomenes captis castus, azureus contencioes. Emeritis, clemens rumors satis amor de pius, mirabilis.</p>
+                        <br><hr>
+                        <h3> <span style="color: #FFC727;">2018. </span>Better Solutions for Clients</h3>
+                        <p class="animate__animated animate__fadeInDown animate__slower	1s animate__delay-5s	5s">Camerarius species vix quaestios historia est. Camerarius, bassus tumultumques saepe gratia </p>
+                    
+                    
+                      </div>
+
+
+                 </div>
+            </div>
+    
+           
+     </section>
+
+     <div class="footer">
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+
+
+
+
+    </center>
+    
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+   
+
+    const slides = document.querySelectorAll(".slides");
+const dots = document.querySelectorAll(".dot");
+
+function setActive(i) {
+  for (slide of slides) {
+    slide.classList.remove("active");
+    slide.style.background = ""; // Reset the background
+  }
+  slides[i].classList.add("active");
+
+  for (dot of dots) dot.classList.remove("active");
+  dots[i].classList.add("active");
+
+  if (slides[i].classList.contains("bb")) {
+    
+    slides[i].style.minHeight = "80vh";
+    slides[i].style.width = "150vh";
+    slides[i].style.background = "linear-gradient(  #EF33A6,#FF7036)";
+   
+    slides[i].style.marginTop = "-112px";
+    slides[i].style.borderRadius = "50px";
+  }
+}
+
+
+
+
+
+      for(let j = 0; j < dots.length; j++) {
+  dots[j].addEventListener("click", function () {
+    setTimeout(function() {
+      setActive(j);
+    }, 400);
+  });
+
+      }
+    </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+  </body>
+</html>
+        
